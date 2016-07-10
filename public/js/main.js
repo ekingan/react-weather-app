@@ -20148,6 +20148,7 @@ var App = React.createClass({
 			this.setState({ weather: [data] });
 		}.bind(this));
 	},
+
 	render: function () {
 		var currentWeatherPanel = this.state.weather.map(function (item, key) {
 			return React.createElement(CurrentWeatherPanel, {
@@ -20160,6 +20161,10 @@ var App = React.createClass({
 				conditions: item.list[0].weather[0].description
 			});
 		});
+		var borderStyle = {
+			borderRadius: 16,
+			border: "10px solid #0f0a0a"
+		};
 		//Loops through all data in state of weather
 		var futureWeatherPanel = this.state.weather.map(function (item, key) {
 			return React.createElement(FutureWeatherPanel, {
@@ -20172,7 +20177,7 @@ var App = React.createClass({
 
 		return React.createElement(
 			'div',
-			{ className: 'container' },
+			{ className: 'container', style: borderStyle },
 			React.createElement(
 				'div',
 				{ className: 'row' },

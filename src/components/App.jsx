@@ -20,6 +20,7 @@ var App = React.createClass ({
 			this.setState({weather: [data]});
 		}.bind(this));
 	},
+
 	render: function() {
 		var currentWeatherPanel = this.state.weather.map(function(item, key){
 			return (
@@ -34,6 +35,10 @@ var App = React.createClass ({
 				/>
 			);
 		});
+		var borderStyle = {
+			borderRadius: 16,
+  		border: "10px solid #0f0a0a",
+		}
 		//Loops through all data in state of weather
 		var futureWeatherPanel = this.state.weather.map(function(item, key) {
 			return (
@@ -47,7 +52,7 @@ var App = React.createClass ({
 		});
 
 		return (
-			<div className="container">
+			<div className="container" style={borderStyle}>
 				<div className="row">
 					<div className="col-sm-12">
 						<div className="panel">
