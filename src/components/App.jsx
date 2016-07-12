@@ -12,6 +12,7 @@ var App = React.createClass ({
 		HTTP.get('/data/2.5/forecast?q=Portland,us&units=imperial&mode=json&appid=389fe5cd1ef36b657382a7ef465553f2')
 		.then(function(data) {
 			this.setState({weather: [data]});
+			console.log([data]);
 		}.bind(this));
 	},
 	handleSearch: function(search){
@@ -36,8 +37,8 @@ var App = React.createClass ({
 			);
 		});
 		var borderStyle = {
-			borderRadius: 16,
-  		border: "10px solid #0f0a0a",
+			borderRadius: 15,
+  		border: "13px solid #0f0a0a",
 		}
 		//Loops through all data in state of weather
 		var futureWeatherPanel = this.state.weather.map(function(item, key) {

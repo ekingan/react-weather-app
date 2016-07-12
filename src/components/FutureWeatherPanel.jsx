@@ -34,7 +34,7 @@ var evalMonth = function(month){
 var FutureWeatherPanel = React.createClass ({
 	render: function() {
 		var futureWeatherItem = this.props.tempList.map(function(item, key){
-			if(item.dt_txt.substring(11, 13) == "12") {
+			if(item.dt_txt.substring(11, 13) == "18") {
 				return (
 					<div key={key}>
 						<FutureWeatherItem
