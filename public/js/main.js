@@ -20493,6 +20493,7 @@ module.exports = FutureWeatherPanel;
 
 },{"./FutureWeatherItem.jsx":171,"react":167}],173:[function(require,module,exports){
 var React = require('react');
+
 var searchIcon = {
 	fontSize: 20
 

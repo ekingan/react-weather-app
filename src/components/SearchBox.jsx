@@ -1,4 +1,5 @@
 var React = require('react');
+
 var searchIcon = {
   fontSize: 20
   
